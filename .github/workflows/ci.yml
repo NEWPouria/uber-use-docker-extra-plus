@@ -30,6 +30,9 @@ jobs:
       - name: Build custom services
         run: docker compose build --pull --build-arg PIP_INDEX_URL=https://pypi.org/simple
 
+      - name: Create loki data directory with correct permissions
+        run: mkdir -p loki/data && chmod -R 777 loki/data
+        
       - name: Start all services
         run: docker compose up -d
 
