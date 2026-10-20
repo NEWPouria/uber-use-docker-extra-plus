@@ -26,9 +26,9 @@ jobs:
 
       - name: Validate docker-compose config
         run: docker compose config --quiet
-
+        
       - name: Build custom services
-        run: docker compose build --pull
+        run: docker compose build --pull --build-arg PIP_INDEX_URL=https://pypi.org/simple
 
       - name: Start all services
         run: docker compose up -d
