@@ -1,0 +1,31 @@
+﻿# --- Environment & Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Docker ---
+*.log
+docker-compose.override.yml
+
+# --- Loki Data (داده‌های لاگ) ---
+loki/data/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# --- Go ---
+*.exe
+*.test
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+
+# --- OS ---
+.DS_Store
+Thumbs.db
